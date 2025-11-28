@@ -129,6 +129,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* header setting */
 h1 {
   font-size: xx-large;
   font-weight: 700;
@@ -149,6 +150,8 @@ input:focus {
 
 header {
   display: grid;
+  position: sticky;
+  top: 0;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   background-color: #ffc4c4;
@@ -178,7 +181,7 @@ label {
   font-weight: 500;
 }
 
-.add-button {
+.add-btn {
   padding: 0 1rem;
   background-color: #ee6983;
   border: none;
@@ -186,15 +189,96 @@ label {
   color: #fcf5ee;
 }
 
-.add-button:active {
+.add-btn:active {
   background-color: #fcf5ee;
   color: black;
 }
 
+/* main setting */
 main {
   background-color: #fcf5ee;
-  height: 90vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
+  padding: 1rem;
+  min-height: 85vh;
+}
+
+.card {
+  position: relative;
+  background-color: #850e35;
+  color: white;
+  height: 20rem;
+  width: 18rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card > div:first-child {
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card > div:last-child {
+  display: flex;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bolder;
+  max-width: 15rem;
+  text-align: center;
+}
+
+.card > div:first-child p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+.card > div:last-child button {
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  width: 10rem;
+  background-color: #ffc4c4;
+  color: #850e35;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card > div:last-child button:active {
+  background-color: #fcf5ee;
+  color: black;
+}
+
+.card p {
+  text-align: center;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.true {
+  background-color: green;
+}
+
+.false {
+  background-color: red;
 }
