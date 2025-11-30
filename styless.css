@@ -198,17 +198,19 @@ label {
 main {
   background-color: #fcf5ee;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
   gap: 1rem;
   padding: 1rem;
   min-height: 85vh;
+  overflow-y: auto;
 }
 
 .card {
   position: relative;
   background-color: #850e35;
   color: white;
-  height: 20rem;
+  min-height: 20rem;
+  max-height: 410px;
   width: 18rem;
   border-radius: 1rem;
   display: flex;
@@ -217,7 +219,7 @@ main {
   justify-content: space-around;
 }
 
-.card > div:first-child {
+.container-detail {
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
@@ -237,7 +239,7 @@ h2 {
   text-align: center;
 }
 
-.card > div:first-child p:nth-of-type(2) {
+.container-detail p:nth-of-type(2) {
   font-weight: bold;
 }
 
