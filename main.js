@@ -15,6 +15,26 @@ let myLibrary = [
   },
 ];
 
+class Book {
+  constructor(name, author, pages, readed) {
+    this.id = crypto.randomUUID();
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.readed = readed;
+  }
+}
+
+class Library {
+  constructor(books = []) {
+    this.books = books;
+  }
+}
+
+class Display {
+  constructor() {}
+}
+
 function Book(name, author, pages, readed) {
   this.id = crypto.randomUUID();
   this.name = name;
@@ -52,7 +72,7 @@ const removeBookFromLibrary = (event) => {
   const id = card.querySelector("#userId").value;
   myLibrary.splice(
     myLibrary.findIndex((book) => book.id == id),
-    1
+    1,
   );
 
   loadPage();
