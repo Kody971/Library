@@ -135,7 +135,12 @@ class Library {
     this.books.push(book);
   }
 
-  deleteBook() {}
+  deleteBook(targetBook) {
+    this.books.splice(
+      this.books.findIndex((book) => book.id == targetBook.id),
+      1,
+    );
+  }
 
   getBooks() {
     return this.books;
