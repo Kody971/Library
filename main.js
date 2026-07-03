@@ -52,7 +52,6 @@ class Display {
     main.innerHTML = "";
 
     books.forEach((book) => {
-      const main = document.querySelector("main");
       const card = document.createElement("div");
       card.classList.add("card");
 
@@ -68,7 +67,7 @@ class Display {
 
       const mark = document.createElement("p");
       mark.classList.add("mark");
-      if (book.read) {
+      if (book.readed) {
         mark.classList.add("true");
         mark.textContent = "Readed";
       } else {
